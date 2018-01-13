@@ -10,11 +10,17 @@ class Queue {
   }
 
   add(record) {
-    this.data.unshift(record);
+    this.data.push(record);
   }
 
   remove() {
-    return this.data.pop();
+  	let removed = this.data[0];
+  	this.data.splice(0, 1);
+    return removed;
+  }
+
+  peek(){
+    return this.data[0];
   }
 }
 
