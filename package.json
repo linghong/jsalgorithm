@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest basic/15-weave/test.js --watch"
   },
   "author": "",
   "license": "ISC",
