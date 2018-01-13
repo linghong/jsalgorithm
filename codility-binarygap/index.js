@@ -28,3 +28,5 @@ function solution(N) {
     }    
     return max;
 }
+
+module.exports = solution;
