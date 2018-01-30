@@ -88,20 +88,16 @@ describe('RemoveFirst', () => {
     l.insertFirst('c');
     l.insertFirst('b');
     l.insertFirst('a');
-    console.log("l", l);
     l.removeFirst();
-    console.log("l2", l);
     expect(l.size()).toEqual(2);
-     console.log("l21", l);
     expect(l.getFirst().data).toEqual('b');
     l.removeFirst();
-       console.log("l3", l);
     expect(l.size()).toEqual(1);
     expect(l.getFirst().data).toEqual('c');
   });
 });
 
-describe.skip('RemoveLast', () => {
+describe('RemoveLast', () => {
   test('RemoveLast removes the last node when list is empty', () => {
     const l = new List();
     expect(() => {
@@ -139,13 +135,13 @@ describe.skip('RemoveLast', () => {
   });
 });
 
-describe.skip('InsertLast', () => {
+describe('InsertLast', () => {
   test('adds to the end of the list', () => {
     const l = new List();
     l.insertFirst('a');
-
+console.log("l1",l);
     l.insertLast('b');
-
+console.log("l2", l);
     expect(l.size()).toEqual(2);
     expect(l.getLast().data).toEqual('b');
   });
