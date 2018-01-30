@@ -20,9 +20,10 @@ class LinkedList {
 
 	size(){
 		let size = 0;
-		while(this.head!=null){
+		let node =this.head;
+		while(node!=null){
 			size++;
-			this.head = this.head.next;
+			node = node.next;
 		}
 		 return size;
 	}
@@ -32,10 +33,23 @@ class LinkedList {
 	}
 
 	getLast(){
-		while(this.head.next!=null){
-			this.head = this.head.next;
+		let node = this.head;
+		while(node.next!=null){
+			node = node.next;
 		}
-		return this.head
+		return node;
+	}
+
+	clear(){
+		this.head = null;
+	}
+
+	removeFirst(){
+		console.log("this.head", this.head);
+		if(!this.head){
+			return;
+		}
+		this.head = this.head.next;
 	}
 }
 
