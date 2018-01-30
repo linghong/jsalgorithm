@@ -26,6 +26,17 @@ class LinkedList {
 		}
 		 return size;
 	}
+
+	getFirst(){
+		return this.head;
+	}
+
+	getLast(){
+		while(this.head.next!=null){
+			this.head = this.head.next;
+		}
+		return this.head
+	}
 }
 
 module.exports = { Node, LinkedList };
