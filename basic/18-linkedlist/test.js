@@ -139,9 +139,7 @@ describe('InsertLast', () => {
   test('adds to the end of the list', () => {
     const l = new List();
     l.insertFirst('a');
-console.log("l1",l);
     l.insertLast('b');
-console.log("l2", l);
     expect(l.size()).toEqual(2);
     expect(l.getLast().data).toEqual('b');
   });
